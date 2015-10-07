@@ -19,7 +19,11 @@ BASHRC=~/.bashrc
 WIPE=0
 
 usage() {
-    echo "USAGE IS a TODO"
+    echo "setup.sh -[pw]"
+    echo " -h   Show this message"
+    echo " -p   Destination Prefix"
+    echo "      Default: $PREFIX"
+    echo " -w   Wipe destination directories (if posible)"
 }
 
 RES(){
@@ -122,9 +126,10 @@ post_install(){
 
 
 
-
-while getopts "p:w" o; do
+while getopts "hp:w" o; do
     case "$o" in
+	h)  usage
+	    ;;
 	p)
 	    PREFIX=$OPTARG
 	    ;;
