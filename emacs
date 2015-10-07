@@ -81,6 +81,11 @@
 ;;; .emacs ends here
 
 
+; Add cuda files to C++ mode
+(add-to-list 'auto-mode-alist '("\\.cu$" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.cuh$" . c++-mode))
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; GENERIC TUNES
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
